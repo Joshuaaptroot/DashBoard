@@ -1,5 +1,58 @@
-* {
-    background-color: rgb(190, 209, 225);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
-}
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dashboard title */
+  .dashboard-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Chart containers for responsive layout */
+  .chart-container {
+    padding: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  /* Adjusting the size of the charts */
+  #ordersChart,
+  #stockChart,
+  #popularProductsChart {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  /* Clearfix for floating elements */
+  .chart-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Copyright notice */
+  .footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+  }
+  

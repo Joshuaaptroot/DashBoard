@@ -1,43 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Your meta tags and title here -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
-
-    <link rel="stylesheet" href="Styles.css">
-</head>
-
-<body>
-
-    <header>
-        <div class="dashboard-title">RobotMetrics Dashboard</div>
-    </header>
-
-    <div class='container'>
-
-        <section>
-            <div class="chart-row">
-                <div class="chart-container full-width">
-                    <h2>Execution Time by Assignee</h2>
-                    <canvas id="executionTimeChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- Other sections/charts related to RobotMetrics can be added here -->
-      
-    </div>
-
-    <footer>
-        <div class="footer">© 2023 CCL RobotMetrics Dashboard</div>
-    </footer>
-
-    <script>
         // Fetch and render execution time chart
-                console.log('Fetching data...');
+        console.log('Fetching data...');
         fetch('/api/RobotMetrics')
             .then(response => response.json())
             .then(data => {
@@ -77,6 +39,3 @@
                     }
                 });
             });
-    </>
-</body>
-</html>
