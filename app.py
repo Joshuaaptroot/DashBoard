@@ -3,7 +3,7 @@ import sqlite3
 import pathlib
 
 working_directory =  pathlib.Path(__file__).parent.absolute()
-DATABASE = working_directory / 'CCL_ecommerce.db'
+DATABASE = working_directory / 'PData.db'
 
 def query_db(query: str, args=()) -> list:
     with sqlite3.connect(DATABASE) as conn:
@@ -18,15 +18,15 @@ app =  Flask(__name__)
 def index() -> str:
     return render_template('main.html')
 
-@app.route("/api/orders_over_time")
+@app.route("/api/RobotMetrics")
 
 def orders_over_time() -> Response:
 
     query = """
-    SELECT order_date, COUNT(order_id) AS num_orders
-    FROM orders
-    GROUP BY order_date
-    ORDER BY order_date;
+    SELECT Execution_Time
+    FROM RobotMetrics
+    GROUP BY Execution_Time
+    ORDER BY Assignee;
 
     """
 
